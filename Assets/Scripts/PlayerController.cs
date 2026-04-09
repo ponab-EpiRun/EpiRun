@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer sr;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,6 +32,11 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             doubleJumpAvailable = false;
         }
+        //Modificación para que el personaje caiga más rápido de lo que sube
+        if (rb.linearVelocity.y < 0)
+        {
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * 1.5f * Time.deltaTime;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -42,10 +46,12 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             doubleJumpAvailable = false;
         }
-        //Cambiamos el color del personaje si choca con un obstáculo para probar la colisión
-        if (collision.gameObject.CompareTag("Obstacle"))
+        //Cambiamos el color del personaje si choca con un obstáculo/enemigo para probar la colisión
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Enemy") )
         {
             sr.color = Color.red;
+            //Rotamos en 90 para simular muerte
+            transform.rotation = Quaternion.Euler(0, 0, 90);
         }
     }
 }
