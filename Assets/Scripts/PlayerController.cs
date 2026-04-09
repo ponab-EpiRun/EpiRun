@@ -9,9 +9,13 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = true;
     private bool doubleJumpAvailable = false;
 
+    private SpriteRenderer sr;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -32,12 +36,16 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Al tocar el suelo, se reinician los saltos
+    {   //Al tocar el suelo, se reinician los saltos
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
             doubleJumpAvailable = false;
+        }
+        //Cambiamos el color del personaje si choca con un obstáculo para probar la colisión
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            sr.color = Color.red;
         }
     }
 }
