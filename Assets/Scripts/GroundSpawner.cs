@@ -10,7 +10,7 @@ public class GroundSpawner : MonoBehaviour
     [Header("Generation Settings")]
     public float segmentWidth = 10f;
     public int initialSegments = 6;
-    public float spawnOffset = 2f;
+    public float spawnOffset = 10f;
     public float groundY = -2f;
 
     [Header("Probabilities")]
@@ -22,16 +22,19 @@ public class GroundSpawner : MonoBehaviour
     private float nextSpawnX;
     private float cameraRightEdge;
     private readonly List<GameObject> activeSegments = new List<GameObject>();
+    private Camera mainCamera;
 
     void Start()
     {
-        float camHeight = Camera.main.orthographicSize;
-        float camWidth = camHeight * Camera.main.aspect;
+        mainCamera = Camera.main;
 
-        cameraRightEdge = Camera.main.transform.position.x + camWidth;
+        float camHeight = mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+
+        cameraRightEdge = mainCamera.transform.position.x + camWidth;
 
         // Empezamos bastante a la izquierda para que el jugador ya tenga suelo
-        nextSpawnX = Camera.main.transform.position.x - camWidth - (segmentWidth * 2f);
+        nextSpawnX = mainCamera.transform.position.x - camWidth - (segmentWidth * 2f);
 
         // Generamos suelo inicial
         for (int i = 0; i < initialSegments; i++)
@@ -42,24 +45,29 @@ public class GroundSpawner : MonoBehaviour
 
     void Update()
     {
-        float camHeight = Camera.main.orthographicSize;
-        float camWidth = camHeight * Camera.main.aspect;
-        cameraRightEdge = Camera.main.transform.position.x + camWidth;
+        float camHeight = mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+        cameraRightEdge = mainCamera.transform.position.x + camWidth;
 
         // Si el último segmento ya se acerca al borde derecho, generamos otro
         if (activeSegments.Count > 0)
         {
-            GameObject lastSegment = activeSegments[activeSegments.Count - 1];
+            int maxSpawnsPerFrame = 3;
 
-            if (lastSegment != null)
+            for (int s = 0; s < maxSpawnsPerFrame; s++)
             {
+                GameObject lastSegment = activeSegments[activeSegments.Count - 1];
+
+                if (lastSegment == null)
+                    break;
+
                 float spawnTriggerX = cameraRightEdge + spawnOffset;
                 float lastSegmentRightEdge = lastSegment.transform.position.x + (segmentWidth * 0.5f);
 
-                if (lastSegmentRightEdge < spawnTriggerX)
-                {
-                    SpawnSegment(GetNextSegmentPrefab());
-                }
+                if (lastSegmentRightEdge >= spawnTriggerX)
+                    break;
+
+                SpawnSegment(GetNextSegmentPrefab());
             }
         }
 
@@ -84,15 +92,32 @@ public class GroundSpawner : MonoBehaviour
 
     void SpawnSegment(GameObject segmentPrefab)
     {
-        Vector3 spawnPosition = new Vector3(nextSpawnX + (segmentWidth * 0.5f), groundY, 0f);
+        float spawnX;
+
+        if (activeSegments.Count == 0)
+        {
+            spawnX = nextSpawnX + (segmentWidth * 0.5f);
+        }
+        else
+        {
+            GameObject lastSegment = activeSegments[activeSegments.Count - 1];
+            float lastSegmentRightEdge = lastSegment.transform.position.x + (segmentWidth * 0.5f);
+            spawnX = lastSegmentRightEdge + (segmentWidth * 0.5f);
+        }
+
+        Vector3 spawnPosition = new Vector3(spawnX, groundY, 0f);
         GameObject newSegment = Instantiate(segmentPrefab, spawnPosition, Quaternion.identity);
 
         activeSegments.Add(newSegment);
-        nextSpawnX += segmentWidth;
+        nextSpawnX = spawnX + (segmentWidth * 0.5f);
     }
 
     void CleanupOldSegments()
     {
+        float camHeight = mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+        float destroyLimit = mainCamera.transform.position.x - camWidth - 10f;
+
         for (int i = activeSegments.Count - 1; i >= 0; i--)
         {
             if (activeSegments[i] == null)
@@ -103,7 +128,7 @@ public class GroundSpawner : MonoBehaviour
 
             float segmentRightEdge = activeSegments[i].transform.position.x + (segmentWidth * 0.5f);
 
-            if (segmentRightEdge < destroyX)
+            if (segmentRightEdge < destroyLimit)
             {
                 Destroy(activeSegments[i]);
                 activeSegments.RemoveAt(i);
