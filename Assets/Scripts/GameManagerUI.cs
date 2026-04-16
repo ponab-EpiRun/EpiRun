@@ -50,4 +50,26 @@ public class GameUIManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Salir del juego");
     }
+
+    public void ShowGameOver()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
+        isGameOver = true;
+    }
+
+    public void RetryGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Gym");
+    }
+
+
+
+
+
 }

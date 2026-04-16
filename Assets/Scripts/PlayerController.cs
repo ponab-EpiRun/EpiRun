@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
     private bool doubleJumpAvailable = false;
 
     private SpriteRenderer sr;
+    private GameUIManager gameUIManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        gameUIManager = FindFirstObjectByType<GameUIManager>();
     }
 
     void Update()
@@ -52,6 +54,11 @@ public class PlayerController : MonoBehaviour
             sr.color = Color.red;
             //Rotamos en 90 para simular muerte
             transform.rotation = Quaternion.Euler(0, 0, 90);
+
+            if (gameUIManager != null)
+            {
+                gameUIManager.ShowGameOver();
+            }
         }
     }
 }
