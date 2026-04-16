@@ -51,7 +51,7 @@ public class GroundSpawner : MonoBehaviour
         {
             GameObject lastSegment = activeSegments[activeSegments.Count - 1];
 
-            while (lastSegment != null)
+            if (lastSegment != null)
             {
                 float spawnTriggerX = cameraRightEdge + spawnOffset;
                 float lastSegmentRightEdge = lastSegment.transform.position.x + (segmentWidth * 0.5f);
