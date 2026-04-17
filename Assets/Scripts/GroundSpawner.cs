@@ -16,11 +16,15 @@ public class GroundSpawner : MonoBehaviour
     [Header("Probabilities")]
     [Range(0f, 1f)] public float holeChance = 0.2f;
 
+    [Header("Safe Start")]
+    public int safeStartSegments = 8;
+
     [Header("Cleanup")]
     public float destroyX = -20f;
 
     private float nextSpawnX;
     private float cameraRightEdge;
+    private int spawnedSegmentsCount;
     private readonly List<GameObject> activeSegments = new List<GameObject>();
     private Camera mainCamera;
 
@@ -35,6 +39,7 @@ public class GroundSpawner : MonoBehaviour
 
         // Empezamos bastante a la izquierda para que el jugador ya tenga suelo
         nextSpawnX = mainCamera.transform.position.x - camWidth - (segmentWidth * 2f);
+        spawnedSegmentsCount = 0;
 
         // Generamos suelo inicial
         for (int i = 0; i < initialSegments; i++)
@@ -76,6 +81,12 @@ public class GroundSpawner : MonoBehaviour
 
     GameObject GetNextSegmentPrefab()
     {
+        // Evitar agujeros al inicio de la partida
+        if (spawnedSegmentsCount < safeStartSegments)
+        {
+            return groundSegmentPrefab;
+        }
+
         // Evitar dos agujeros seguidos
         if (activeSegments.Count > 0)
         {
@@ -110,6 +121,7 @@ public class GroundSpawner : MonoBehaviour
 
         activeSegments.Add(newSegment);
         nextSpawnX = spawnX + (segmentWidth * 0.5f);
+        spawnedSegmentsCount++;
     }
 
     void CleanupOldSegments()

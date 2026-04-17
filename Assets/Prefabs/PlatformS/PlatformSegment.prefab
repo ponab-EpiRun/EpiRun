@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6964558637366545161}
   - component: {fileID: 5931090181543884992}
   - component: {fileID: 5867208162683227995}
+  - component: {fileID: -1651835235081480633}
   m_Layer: 0
   m_Name: PlatformSegment
   m_TagString: Ground
@@ -27,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1783673509901728570}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.91, y: -2.53, z: -0.04736126}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,3 +135,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1651835235081480633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783673509901728570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163be312c57b23040b49508832fe82a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
