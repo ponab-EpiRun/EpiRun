@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 20212f56cd9fbfb4089a13025869a1b7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -165,6 +165,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundSegment
       objectReference: {fileID: 0}
+    - target: {fileID: 7259548403645058135, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4019404
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259548403645058135, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409463703353005332, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.075
+      objectReference: {fileID: 0}
     - target: {fileID: 9123400869627786362, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -241,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867208162683227995, guid: fdaf63badf56ab844b47f31dae1708a9, type: 3}
       propertyPath: m_Offset.y
-      value: -0.07626639
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 5867208162683227995, guid: fdaf63badf56ab844b47f31dae1708a9, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode

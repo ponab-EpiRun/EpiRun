@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867208162683227995, guid: fdaf63badf56ab844b47f31dae1708a9, type: 3}
       propertyPath: m_Offset.y
-      value: -0.08171396
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 5867208162683227995, guid: fdaf63badf56ab844b47f31dae1708a9, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867208162683227995, guid: fdaf63badf56ab844b47f31dae1708a9, type: 3}
       propertyPath: m_Offset.y
-      value: -0.07626639
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 5867208162683227995, guid: fdaf63badf56ab844b47f31dae1708a9, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
