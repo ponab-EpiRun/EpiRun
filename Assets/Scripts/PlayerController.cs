@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private GameUIManager gameUIManager;
 
+    private float startX;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,12 +27,15 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         gameUIManager = FindFirstObjectByType<GameUIManager>();
 
+        startX = transform.position.x;
+
         // Estado inicial del Animator
         if (animator != null)
         {
             animator.updateMode = AnimatorUpdateMode.UnscaledTime;
             animator.speed = 1f;
             animator.SetBool("isJumping", false);
+            animator.SetBool("isFlipping", false);
             animator.SetBool("isDead", false);
         }
     }
@@ -53,12 +58,22 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
             doubleJumpAvailable = true;
+
+            if (animator != null)
+            {
+                animator.SetBool("isFlipping", false);
+            }
         }
         // Doble salto en el aire
         else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && doubleJumpAvailable)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             doubleJumpAvailable = false;
+
+            if (animator != null)
+            {
+                animator.SetBool("isFlipping", true);
+            }
         }
 
         // Modificación para que el personaje caiga más rápido de lo que sube
@@ -66,19 +81,32 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * 1.5f * Time.deltaTime;
         }
+
+        // Evitamos que el jugador se quede atrás o avance por choques laterales
+        transform.position = new Vector3(startX, transform.position.y, transform.position.z);
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Al tocar el suelo, se reinician los saltos
-        if (collision.gameObject.CompareTag("Ground"))
+        // Al tocar el suelo o plataforma desde arriba, se reinician los saltos
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
-            isGrounded = true;
-            doubleJumpAvailable = false;
-
-            if (animator != null)
+            foreach (ContactPoint2D contact in collision.contacts)
             {
-                animator.SetBool("isJumping", false);
+                if (contact.normal.y > 0.5f)
+                {
+                    isGrounded = true;
+                    doubleJumpAvailable = false;
+
+                    if (animator != null)
+                    {
+                        animator.SetBool("isJumping", false);
+                        animator.SetBool("isFlipping", false);
+                    }
+
+                    break;
+                }
             }
         }
 
@@ -98,10 +126,8 @@ public class PlayerController : MonoBehaviour
         {
             animator.speed = 1f;
             animator.SetBool("isJumping", false);
+            animator.SetBool("isFlipping", false);
             animator.SetBool("isDead", true);
-
-            // Forzamos el estado de muerte desde el principio
-           // animator.Play("Player_dying", 0, 0f);
         }
 
         // Detenemos gravedad y movimiento del jugador
