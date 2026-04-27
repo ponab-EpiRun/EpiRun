@@ -13,41 +13,32 @@ public class GameHUDManager : MonoBehaviour
 
     [Header("Energy Settings")]
     public float maxEnergy = 100f;
-    public float energyDrainPerSecond = 30f;
+    public float energyDrainPerSecond = 5f;
 
     private float gameTime;
-    private int score;
+    private int bonusScore;
+    private int totalScore;
+
     private float currentEnergy;
     private bool isGameOver = false;
 
     void Start()
     {
         currentEnergy = maxEnergy;
-
         FindTexts();
-
         UpdateHUD();
     }
 
     void FindTexts()
     {
         if (timeText == null)
-        {
-            GameObject obj = GameObject.Find("TimeText");
-            if (obj != null) timeText = obj.GetComponent<TextMeshPro>();
-        }
+            timeText = GameObject.Find("TimeText")?.GetComponent<TextMeshPro>();
 
         if (scoreText == null)
-        {
-            GameObject obj = GameObject.Find("ScoreText");
-            if (obj != null) scoreText = obj.GetComponent<TextMeshPro>();
-        }
+            scoreText = GameObject.Find("ScoreText")?.GetComponent<TextMeshPro>();
 
         if (energyText == null)
-        {
-            GameObject obj = GameObject.Find("EnergyText");
-            if (obj != null) energyText = obj.GetComponent<TextMeshPro>();
-        }
+            energyText = GameObject.Find("EnergyText")?.GetComponent<TextMeshPro>();
     }
 
     void Update()
@@ -56,16 +47,12 @@ public class GameHUDManager : MonoBehaviour
             return;
 
         gameTime += Time.deltaTime;
-        score = Mathf.FloorToInt(gameTime * scorePerSecond);
+
+        // Score base por tiempo + bonus por gemas
+        totalScore = Mathf.FloorToInt(gameTime * scorePerSecond) + bonusScore;
 
         currentEnergy -= energyDrainPerSecond * Time.deltaTime;
         currentEnergy = Mathf.Clamp(currentEnergy, 0f, maxEnergy);
-
-        if (currentEnergy <= 0f)
-        {
-            isGameOver = true;
-            Debug.Log("GAME OVER - Sin energía");
-        }
 
         UpdateHUD();
     }
@@ -76,7 +63,7 @@ public class GameHUDManager : MonoBehaviour
             timeText.text = "Tiempo: " + Mathf.FloorToInt(gameTime) + "s";
 
         if (scoreText != null)
-            scoreText.text = "Puntuación: " + score;
+            scoreText.text = "Puntuación: " + totalScore;
 
         if (energyText != null)
             energyText.text = "Energía: " + Mathf.FloorToInt(currentEnergy) + "%";
@@ -86,6 +73,13 @@ public class GameHUDManager : MonoBehaviour
     {
         currentEnergy += amount;
         currentEnergy = Mathf.Clamp(currentEnergy, 0f, maxEnergy);
+        UpdateHUD();
+    }
+
+    public void AddScore(int amount)
+    {
+        bonusScore += amount;
+        UpdateHUD();
     }
 
     public void StopHUD()
