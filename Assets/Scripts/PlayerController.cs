@@ -89,8 +89,8 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Al tocar el suelo o plataforma desde arriba, se reinician los saltos
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
+        // Al tocar el suelo desde arriba, se reinician los saltos
+        if (collision.gameObject.CompareTag("Ground"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {

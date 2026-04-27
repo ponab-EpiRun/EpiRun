@@ -34,6 +34,13 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnObstacle()
     {
+        if (obstaclePrefab == null)
+        {
+            Debug.LogError("Falta asignar obstaclePrefab en el objeto: " + gameObject.name);
+            enabled = false;
+            return;
+        }
+
         float camHeight = mainCamera.orthographicSize;
         float camWidth = camHeight * mainCamera.aspect;
         float cameraRightEdge = mainCamera.transform.position.x + camWidth;

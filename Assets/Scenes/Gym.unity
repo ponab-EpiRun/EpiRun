@@ -1600,7 +1600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c0c4ca3bbed0c4c92eedff06498f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 6583580063755433713, guid: 61e957fad62d39d4ebe2414829f6525b, type: 3}
+  obstaclePrefab: {fileID: 3762797295810971732, guid: 61e957fad62d39d4ebe2414829f6525b, type: 3}
   minSpawnTime: 1.5
   maxSpawnTime: 5
   spawnOffsetX: 15
@@ -1862,7 +1862,7 @@ GameObject:
   - component: {fileID: 1081444771}
   m_Layer: 0
   m_Name: PlatformSpawner
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1880,12 +1880,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 1783673509901728570, guid: 1549dc6ace4cd2348b3f3e5b015b66e4, type: 3}
-  initialPlatforms: 2
+  initialPlatforms: 0
   spawnOffset: 10
   minGapX: 26
   maxGapX: 38
   skipGapX: 28
-  platformChance: 0.15
+  platformChance: 0.433
   minY: -1
   maxY: 3
   maxHeightStep: 1.5

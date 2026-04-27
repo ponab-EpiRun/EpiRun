@@ -34,7 +34,6 @@ public class PlatformSpawner : MonoBehaviour
     private float lastSpawnY;
     private float lastPlatformSpawnX;
     private float nextRequiredGapX;
-    private float nextSpawnX;
     private bool hasSpawnedAnyPlatform;
 
     void Start()
@@ -43,19 +42,18 @@ public class PlatformSpawner : MonoBehaviour
         lastSpawnY = Mathf.Clamp(firstPlatformMinY, minY, maxY);
         lastPlatformSpawnX = 0f;
         nextRequiredGapX = Random.Range(minGapX, maxGapX);
-        nextSpawnX = GetSpawnX();
         hasSpawnedAnyPlatform = false;
 
         // Generamos plataformas iniciales
         for (int i = 0; i < initialPlatforms; i++)
         {
-            TrySpawnPlatform(true);
+            SpawnPlatform(GetSpawnX() + (i * Random.Range(minGapX, maxGapX)));
         }
     }
 
     void Update()
     {
-        // Si el siguiente punto de spawn ya ha entrado en rango, intentamos generar una plataforma
+        // Si la plataforma más a la derecha ya se ha alejado suficiente, intentamos generar otra plataforma
         if (ShouldTrySpawn())
         {
             TrySpawnPlatform(false);
@@ -66,25 +64,30 @@ public class PlatformSpawner : MonoBehaviour
 
     bool ShouldTrySpawn()
     {
-        float spawnTriggerX = GetSpawnX();
-        return nextSpawnX <= spawnTriggerX;
+        GameObject rightmostPlatform = GetRightmostPlatform();
+
+        if (rightmostPlatform == null)
+            return true;
+
+        float spawnX = GetSpawnX();
+        float distanceFromRightmostToSpawn = spawnX - rightmostPlatform.transform.position.x;
+
+        return distanceFromRightmostToSpawn >= nextRequiredGapX;
     }
 
     void TrySpawnPlatform(bool forceSpawn)
     {
-        float spawnX = nextSpawnX;
+        float spawnX = GetSpawnX();
         bool shouldSpawn = forceSpawn || Random.value < platformChance;
 
         if (shouldSpawn)
         {
             SpawnPlatform(spawnX);
             nextRequiredGapX = Random.Range(minGapX, maxGapX);
-            nextSpawnX = spawnX + nextRequiredGapX;
         }
         else
         {
             nextRequiredGapX = Random.Range(minGapX, maxGapX) + skipGapX;
-            nextSpawnX = spawnX + nextRequiredGapX;
         }
     }
 
