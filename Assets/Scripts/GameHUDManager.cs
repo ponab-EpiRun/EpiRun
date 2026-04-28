@@ -22,9 +22,14 @@ public class GameHUDManager : MonoBehaviour
     private float currentEnergy;
     private bool isGameOver = false;
 
+    private DifficultyManager difficultyManager;
+
     void Start()
     {
         currentEnergy = maxEnergy;
+
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
+
         FindTexts();
         UpdateHUD();
     }
@@ -48,8 +53,13 @@ public class GameHUDManager : MonoBehaviour
 
         gameTime += Time.deltaTime;
 
+        float multiplier = 1f;
+
+        if (difficultyManager != null)
+            multiplier = difficultyManager.scoreMultiplier;
+
         // Score base por tiempo + bonus por gemas
-        totalScore = Mathf.FloorToInt(gameTime * scorePerSecond) + bonusScore;
+        totalScore = Mathf.FloorToInt(gameTime * scorePerSecond * multiplier) + bonusScore;
 
         currentEnergy -= energyDrainPerSecond * Time.deltaTime;
         currentEnergy = Mathf.Clamp(currentEnergy, 0f, maxEnergy);
@@ -78,7 +88,12 @@ public class GameHUDManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        bonusScore += amount;
+        float multiplier = 1f;
+
+        if (difficultyManager != null)
+            multiplier = difficultyManager.scoreMultiplier;
+
+        bonusScore += Mathf.RoundToInt(amount * multiplier);
         UpdateHUD();
     }
 

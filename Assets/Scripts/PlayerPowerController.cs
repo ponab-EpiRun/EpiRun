@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerPowerController : MonoBehaviour
 {
+    public float sleipnirDuration = 5f;
     public float yngviDuration = 6f;
     public float skuldDuration = 4f;
     public float lokiDuration = 5f;
@@ -15,11 +16,17 @@ public class PlayerPowerController : MonoBehaviour
 
     private PowerMessageUI powerUI;
     private PlayerController playerController;
+    private DifficultyManager difficultyManager;
+    private Animator animator;
+
+    private Coroutine sleipnirCoroutine;
 
     void Start()
     {
         playerController = GetComponent<PlayerController>();
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
         powerUI = FindFirstObjectByType<PowerMessageUI>();
+        animator = GetComponent<Animator>();
     }
 
     public void ActivatePower(PowerType powerType)
@@ -56,23 +63,48 @@ public class PlayerPowerController : MonoBehaviour
     void ShowPowerMessage(string message)
     {
         if (powerUI != null)
-        {
             powerUI.ShowMessage(message);
-        }
         else
-        {
             Debug.Log("Poder recogido: " + message);
-        }
     }
 
     void ActivateSleipnir()
     {
-        WorldScroller worldScroller = FindFirstObjectByType<WorldScroller>();
+        if (sleipnirCoroutine != null)
+            StopCoroutine(sleipnirCoroutine);
 
-        if (worldScroller != null)
+        sleipnirCoroutine = StartCoroutine(SleipnirRoutine());
+    }
+
+    IEnumerator SleipnirRoutine()
+    {
+        Debug.Log("Sleipnir ACTIVADO");
+
+        if (difficultyManager != null)
         {
-            worldScroller.scrollSpeed *= 1.5f;
+            difficultyManager.moveSpeedMultiplier = 2f;
+            difficultyManager.scoreMultiplier = 3f;
         }
+
+        if (animator != null)
+        {
+            animator.speed = 3f;
+        }
+
+        yield return new WaitForSeconds(sleipnirDuration);
+
+        if (difficultyManager != null)
+        {
+            difficultyManager.moveSpeedMultiplier = 1f;
+            difficultyManager.scoreMultiplier = 1f;
+        }
+
+        if (animator != null)
+        {
+            animator.speed = 1f;
+        }
+
+        Debug.Log("Sleipnir FINALIZADO");
     }
 
     IEnumerator YngviRoutine()

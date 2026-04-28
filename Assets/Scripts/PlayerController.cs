@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private GameUIManager gameUIManager;
 
+    public GameObject auraBalder;
+
     private float startX;
 
     void Start()
@@ -42,6 +44,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isFlipping", false);
             animator.SetBool("isDead", false);
         }
+
+        if (auraBalder != null)
+            auraBalder.SetActive(false);
+
     }
 
     void Update()
@@ -89,6 +95,11 @@ public class PlayerController : MonoBehaviour
         // Evitamos que el jugador se quede atrás o avance por choques laterales
         transform.position = new Vector3(startX, transform.position.y, transform.position.z);
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
+        if (auraBalder != null)
+        {
+            auraBalder.SetActive(hasBalderProtection);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

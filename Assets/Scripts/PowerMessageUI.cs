@@ -7,15 +7,22 @@ public class PowerMessageUI : MonoBehaviour
     public TMP_Text powerText;
     public float showTime = 2f;
 
-    Coroutine currentRoutine;
+    private Coroutine currentRoutine;
 
     void Start()
     {
-        powerText.text = "";
+        if (powerText != null)
+        {
+            powerText.text = "";
+            powerText.enabled = false;
+        }
     }
 
     public void ShowMessage(string message)
     {
+        if (powerText == null)
+            return;
+
         if (currentRoutine != null)
             StopCoroutine(currentRoutine);
 
@@ -24,12 +31,12 @@ public class PowerMessageUI : MonoBehaviour
 
     IEnumerator ShowRoutine(string message)
     {
+        powerText.enabled = true;
         powerText.text = message;
-        powerText.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(showTime);
+        yield return new WaitForSecondsRealtime(showTime);
 
         powerText.text = "";
-        powerText.gameObject.SetActive(false);
+        powerText.enabled = false;
     }
 }

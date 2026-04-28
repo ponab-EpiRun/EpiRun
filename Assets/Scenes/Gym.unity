@@ -187,6 +187,7 @@ RectTransform:
   - {fileID: 993807318}
   - {fileID: 335538553}
   - {fileID: 1309559881}
+  - {fileID: 1656177152}
   m_Father: {fileID: 51620739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -975,7 +976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &335538553
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1038,7 +1039,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278254335
+    rgba: 4294956593
   m_fontColor: {r: 0.19215688, g: 0.83921576, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1395,6 +1396,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430807499}
   m_CullTransparentMesh: 1
+--- !u!4 &487479927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+  m_PrefabInstance: {fileID: 2635024446699531846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &606034340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,8 +1942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerRunePrefab: {fileID: 2927345928659011638, guid: 2be630def12e7244eadff25b0d6ef970, type: 3}
-  minSpawnTime: 2
-  maxSpawnTime: 3
+  minSpawnTime: 5
+  maxSpawnTime: 15
   minY: -1
   maxY: 3
   spawnX: 12
@@ -1989,6 +1995,8 @@ MonoBehaviour:
   startMoveSpeed: 3
   maxMoveSpeed: 7
   speedIncreasePerSecond: 0.025
+  moveSpeedMultiplier: 1
+  scoreMultiplier: 1
   minObstacleSpawnTime: 0.8
   maxObstacleSpawnTime: 2
   minGemSpawnTime: 2
@@ -2613,7 +2621,8 @@ Transform:
   m_LocalPosition: {x: -8.48, y: -1.93, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 487479927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1231324765
@@ -2659,6 +2668,7 @@ MonoBehaviour:
   deathDelay: 1.2
   canDoubleJump: 1
   hasBalderProtection: 0
+  auraBalder: {fileID: 4655311743836687065, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
 --- !u!95 &1231324767
 Animator:
   serializedVersion: 7
@@ -2730,10 +2740,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8f3a7c166e40146bb3fa9f7bfaf43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yngviDuration: 6
-  skuldDuration: 4
+  sleipnirDuration: 5
+  yngviDuration: 7
+  skuldDuration: 5
   lokiDuration: 5
-  yngviEnergyMultiplier: 2
+  yngviEnergyMultiplier: 1.5
   skuldWorldSpeedMultiplier: 0.5
   isYngviActive: 0
   isLokiActive: 0
@@ -3566,6 +3577,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651757247}
   m_CullTransparentMesh: 1
+--- !u!1 &1656177151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656177152}
+  - component: {fileID: 1656177153}
+  m_Layer: 5
+  m_Name: PowerMessageUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1656177152
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656177151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 44102634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1656177153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656177151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5478ea1959ec8c944905a7170c067dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerText: {fileID: 335538555}
+  showTime: 2
 --- !u!1 &1779011300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,6 +4334,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125948760}
   m_CullTransparentMesh: 1
+--- !u!1001 &2635024446699531846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1231324763}
+    m_Modifications:
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655311743836687065, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
+      propertyPath: m_Name
+      value: Balder-Aura
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
 --- !u!1001 &6229782613043343236
 PrefabInstance:
   m_ObjectHideFlags: 0

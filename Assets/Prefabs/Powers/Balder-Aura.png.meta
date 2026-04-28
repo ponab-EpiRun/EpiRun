@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 187fb6989924f7d43ad3d6fd4c889a80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5902718543180413119
+    second: Balder-Aura_0
+  - first:
+      213: 3048325707044491381
+    second: Balder-Aura_1
+  - first:
+      213: 97151860206365213
+    second: Balder-Aura_2
+  - first:
+      213: -6178793521473423766
+    second: Balder-Aura_3
+  - first:
+      213: -8358700811482898530
+    second: Balder-Aura_4
+  - first:
+      213: 5716949811141420645
+    second: Balder-Aura_5
+  - first:
+      213: 2403352069089458505
+    second: Balder-Aura_6
+  - first:
+      213: -4143615651212031007
+    second: Balder-Aura_7
+  - first:
+      213: 9144970928752201985
+    second: Balder-Aura_8
+  - first:
+      213: 8179177405470198341
+    second: Balder-Aura_9
+  - first:
+      213: 558350553641692291
+    second: Balder-Aura_10
+  - first:
+      213: 2008515043582752850
+    second: Balder-Aura_11
+  - first:
+      213: -8000548801539189291
+    second: Balder-Aura_12
+  - first:
+      213: 2853100893156656222
+    second: Balder-Aura_13
+  - first:
+      213: -3397856686179053530
+    second: Balder-Aura_14
+  - first:
+      213: -9042446607803845118
+    second: Balder-Aura_15
+  - first:
+      213: -2922166512878758177
+    second: Balder-Aura_16
+  - first:
+      213: 5843277587274459317
+    second: Balder-Aura_17
+  - first:
+      213: 7380194447162777982
+    second: Balder-Aura_18
+  - first:
+      213: -5383984926980507479
+    second: Balder-Aura_19
+  - first:
+      213: -8854525456222088818
+    second: Balder-Aura_20
+  - first:
+      213: -6347869764704741325
+    second: Balder-Aura_21
+  - first:
+      213: -1031098913226999003
+    second: Balder-Aura_22
+  - first:
+      213: -4355396191758412719
+    second: Balder-Aura_23
+  - first:
+      213: 1157665997705927806
+    second: Balder-Aura_24
+  - first:
+      213: -8921474018561878391
+    second: Balder-Aura_25
+  - first:
+      213: -1740442805491268450
+    second: Balder-Aura_26
+  - first:
+      213: -3962977389735735963
+    second: Balder-Aura_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Balder-Aura_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 520
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147ce9842c4551ea0800000000000000
+      internalID: -5902718543180413119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1
+        width: 549
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57014107414dd4a20800000000000000
+      internalID: 3048325707044491381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_2
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 1
+        width: 500
+        height: 1022
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a6ed42a17295100800000000000000
+      internalID: 97151860206365213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_3
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 780
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6677146704804aa0800000000000000
+      internalID: -6178793521473423766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_4
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 776
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fdac3f5edeffb80800000000000000
+      internalID: -8358700811482898530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_5
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 648
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56622d3409fa65f40800000000000000
+      internalID: 5716949811141420645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_6
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 624
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949f64c29fb6a5120800000000000000
+      internalID: 2403352069089458505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_7
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 624
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb02cfd48bee76c0800000000000000
+      internalID: -4143615651212031007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_8
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 628
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1019c898b9679ee70800000000000000
+      internalID: 9144970928752201985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_9
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 616
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ac3ffd386428170800000000000000
+      internalID: 8179177405470198341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 583
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ca4f9ced8afb700800000000000000
+      internalID: 558350553641692291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_11
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 576
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25837c26acdafdb10800000000000000
+      internalID: 2008515043582752850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_12
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 576
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d55414f04758f090800000000000000
+      internalID: -8000548801539189291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_13
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 566
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54c3fc5520489720800000000000000
+      internalID: 2853100893156656222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 536
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6209c96b85368d0d0800000000000000
+      internalID: -3397856686179053530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_15
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 537
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2067a6918b6c28280800000000000000
+      internalID: -9042446607803845118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_16
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 535
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6d151f9016277d0800000000000000
+      internalID: -2922166512878758177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_17
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 528
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8ee71b10e771150800000000000000
+      internalID: 5843277587274459317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 519
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71a27c6fb7bb6660800000000000000
+      internalID: 7380194447162777982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_19
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 505
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8f4470c3e3845b0800000000000000
+      internalID: -5383984926980507479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_20
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 511
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e819a37c2086e1580800000000000000
+      internalID: -8854525456222088818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_21
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 478
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338d45ad416d7e7a0800000000000000
+      internalID: -6347869764704741325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_22
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 487
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b30dc500dc0b1f0800000000000000
+      internalID: -1031098913226999003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_23
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 455
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154962e4d368e83c0800000000000000
+      internalID: -4355396191758412719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_24
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 432
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c5fc1671bd01010800000000000000
+      internalID: 1157665997705927806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_25
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 294
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9861ebae5ae803480800000000000000
+      internalID: -8921474018561878391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_26
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 288
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e940fca5d74b8d7e0800000000000000
+      internalID: -1740442805491268450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balder-Aura_27
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 199
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d85ef8f0da009c0800000000000000
+      internalID: -3962977389735735963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Balder-Aura_0: -5902718543180413119
+      Balder-Aura_1: 3048325707044491381
+      Balder-Aura_10: 558350553641692291
+      Balder-Aura_11: 2008515043582752850
+      Balder-Aura_12: -8000548801539189291
+      Balder-Aura_13: 2853100893156656222
+      Balder-Aura_14: -3397856686179053530
+      Balder-Aura_15: -9042446607803845118
+      Balder-Aura_16: -2922166512878758177
+      Balder-Aura_17: 5843277587274459317
+      Balder-Aura_18: 7380194447162777982
+      Balder-Aura_19: -5383984926980507479
+      Balder-Aura_2: 97151860206365213
+      Balder-Aura_20: -8854525456222088818
+      Balder-Aura_21: -6347869764704741325
+      Balder-Aura_22: -1031098913226999003
+      Balder-Aura_23: -4355396191758412719
+      Balder-Aura_24: 1157665997705927806
+      Balder-Aura_25: -8921474018561878391
+      Balder-Aura_26: -1740442805491268450
+      Balder-Aura_27: -3962977389735735963
+      Balder-Aura_3: -6178793521473423766
+      Balder-Aura_4: -8358700811482898530
+      Balder-Aura_5: 5716949811141420645
+      Balder-Aura_6: 2403352069089458505
+      Balder-Aura_7: -4143615651212031007
+      Balder-Aura_8: 9144970928752201985
+      Balder-Aura_9: 8179177405470198341
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

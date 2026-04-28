@@ -10,6 +10,10 @@ public class DifficultyManager : MonoBehaviour
     public float maxMoveSpeed = 7f;
     public float speedIncreasePerSecond = 0.025f;
 
+    [Header("Power Multipliers")]
+    public float moveSpeedMultiplier = 1f;
+    public float scoreMultiplier = 1f;
+
     [Header("Obstacle Difficulty")]
     public float minObstacleSpawnTime = 0.8f;
     public float maxObstacleSpawnTime = 2f;
@@ -51,6 +55,9 @@ public class DifficultyManager : MonoBehaviour
             startMoveSpeed,
             maxMoveSpeed
         );
+
+        // AQUÍ ESTÁ LA CLAVE
+        currentSpeed *= moveSpeedMultiplier;
 
         MoveLeft[] movers = FindObjectsByType<MoveLeft>(FindObjectsSortMode.None);
 
