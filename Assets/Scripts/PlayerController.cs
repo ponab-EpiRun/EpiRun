@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     // Tiempo antes de mostrar Game Over
     public float deathDelay = 9.2f;
 
+    [Header("Powers")]
+    public bool canDoubleJump = true;
+    public bool hasBalderProtection = false;
+
     private Rigidbody2D rb;
     private bool isGrounded = true;
     private bool doubleJumpAvailable = false;
@@ -65,7 +69,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         // Doble salto en el aire
-        else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && doubleJumpAvailable)
+        else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && doubleJumpAvailable && canDoubleJump)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             doubleJumpAvailable = false;
@@ -113,6 +117,14 @@ public class PlayerController : MonoBehaviour
         // Muerte al chocar con obstáculo/enemigo
         if ((collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Enemy")) && !isDead)
         {
+            // Protección de Balder: absorbe un impacto y destruye el obstáculo/enemigo
+            if (hasBalderProtection)
+            {
+                hasBalderProtection = false;
+                Destroy(collision.gameObject);
+                return;
+            }
+
             Die();
         }
     }

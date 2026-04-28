@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3881367057387047548}
   - component: {fileID: 7465557442952848082}
   - component: {fileID: 8232239238376997412}
-  - component: {fileID: 5461176073028153494}
+  - component: {fileID: 6998585607194981010}
+  - component: {fileID: 4171462305103377127}
   m_Layer: 0
-  m_Name: GemPrefab
+  m_Name: GemPowerPRefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &5461176073028153494
+--- !u!114 &6998585607194981010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,11 +113,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2927345928659011638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669babc983837e647b466323b88e3213, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dc0717c02e3b9e46bfb0221f6f3742e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyAmount: 20
-  scoreAmount: 100
+  destroyX: -15
+--- !u!114 &4171462305103377127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2927345928659011638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064ff5a20c5a1d74b8d17e1474e43529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerType: 0
 --- !u!1 &8337438474301110296
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +141,7 @@ GameObject:
   - component: {fileID: 9041482786358945745}
   - component: {fileID: 7789112722481380835}
   - component: {fileID: 8523950072344997223}
-  - component: {fileID: 4472941308054961715}
+  - component: {fileID: 5090832411353297745}
   m_Layer: 0
   m_Name: Gema2_0
   m_TagString: Untagged
@@ -145,7 +158,7 @@ Transform:
   m_GameObject: {fileID: 8337438474301110296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2329, y: -0.2717, z: 0}
+  m_LocalPosition: {x: 0.217, y: -0.269, z: 0}
   m_LocalScale: {x: 0.42478418, y: 0.43956468, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 512572323303380978, guid: 7150f1a18d45eaf4892f169a994ab8bc, type: 3}
+  m_Sprite: {fileID: 7974618368605739857, guid: 7150f1a18d45eaf4892f169a994ab8bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -242,7 +255,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.10443521, y: -0.012615749}
   m_Radius: 1.0103734
---- !u!114 &4472941308054961715
+--- !u!114 &5090832411353297745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,8 +264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8337438474301110296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669babc983837e647b466323b88e3213, type: 3}
+  m_Script: {fileID: 11500000, guid: 064ff5a20c5a1d74b8d17e1474e43529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyAmount: 20
-  scoreAmount: 150
+  powerType: 0
