@@ -2090,12 +2090,12 @@ MonoBehaviour:
   moveSpeedMultiplier: 1
   scoreMultiplier: 1
   minObstacleSpawnTime: 0.8
-  maxObstacleSpawnTime: 2
-  minGemSpawnTime: 5
-  maxGemSpawnTime: 15
-  startEnergyDrain: 0.7
+  maxObstacleSpawnTime: 3
+  minGemSpawnTime: 10
+  maxGemSpawnTime: 35
+  startEnergyDrain: 0.5
   maxEnergyDrain: 5
-  energyDrainIncreasePerSecond: 0
+  energyDrainIncreasePerSecond: 0.01
 --- !u!4 &962409294
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,6 +4690,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1729945046722133687, guid: 7958227c8bcbaba43a288150ed09308e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729945046722133687, guid: 7958227c8bcbaba43a288150ed09308e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729945046722133687, guid: 7958227c8bcbaba43a288150ed09308e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1729945046722133687, guid: 7958227c8bcbaba43a288150ed09308e, type: 3}
       propertyPath: m_SortingOrder
       value: -20
