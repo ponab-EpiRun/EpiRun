@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GemPickup : MonoBehaviour
 {
-    public float energyAmount = 20f;
+    public float energyAmount = 25f;
     public int scoreAmount = 100;
 
     private void OnTriggerEnter2D(Collider2D collision)

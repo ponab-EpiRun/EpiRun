@@ -177,6 +177,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.075
       objectReference: {fileID: 0}
+    - target: {fileID: 7409463703353005332, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409463703353005332, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9123400869627786362, guid: f6608cc7c0b092042b1f29f58a13eaa1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1

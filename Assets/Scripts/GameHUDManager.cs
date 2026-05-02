@@ -4,9 +4,9 @@ using TMPro;
 public class GameHUDManager : MonoBehaviour
 {
     [Header("HUD Texts")]
-    public TextMeshPro timeText;
-    public TextMeshPro scoreText;
-    public TextMeshPro energyText;
+    public TMP_Text timeText;
+    public TMP_Text scoreText;
+    public TMP_Text energyText;
 
     [Header("Score Settings")]
     public int scorePerSecond = 10;
@@ -37,13 +37,13 @@ public class GameHUDManager : MonoBehaviour
     void FindTexts()
     {
         if (timeText == null)
-            timeText = GameObject.Find("TimeText")?.GetComponent<TextMeshPro>();
+            timeText = GameObject.Find("TimeText")?.GetComponent<TMP_Text>();
 
         if (scoreText == null)
-            scoreText = GameObject.Find("ScoreText")?.GetComponent<TextMeshPro>();
+            scoreText = GameObject.Find("ScoreText")?.GetComponent<TMP_Text>();
 
         if (energyText == null)
-            energyText = GameObject.Find("EnergyText")?.GetComponent<TextMeshPro>();
+            energyText = GameObject.Find("EnergyText")?.GetComponent<TMP_Text>();
     }
 
     void Update()

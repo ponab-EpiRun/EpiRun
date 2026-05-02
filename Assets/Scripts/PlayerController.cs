@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject auraBalder;
 
+    [Header("Screen Position")]
+    public float distanceFromLeftEdge = 4f;
+
+
+    private Camera mainCamera;
     private float startX;
 
     void Start()
@@ -33,7 +38,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         gameUIManager = FindFirstObjectByType<GameUIManager>();
 
-        startX = transform.position.x;
+        mainCamera = Camera.main;
+        SetPlayerStartX();
 
         // Estado inicial del Animator
         if (animator != null)
@@ -48,6 +54,20 @@ public class PlayerController : MonoBehaviour
         if (auraBalder != null)
             auraBalder.SetActive(false);
 
+    }
+
+    void SetPlayerStartX()
+    {
+        if (mainCamera == null)
+            return;
+
+        float camHeight = mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+        float cameraLeftEdge = mainCamera.transform.position.x - camWidth;
+
+        startX = cameraLeftEdge + distanceFromLeftEdge;
+
+        transform.position = new Vector3(startX, transform.position.y, transform.position.z);
     }
 
     void Update()

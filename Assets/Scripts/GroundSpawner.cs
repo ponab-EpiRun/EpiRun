@@ -28,6 +28,8 @@ public class GroundSpawner : MonoBehaviour
     private readonly List<GameObject> activeSegments = new List<GameObject>();
     private Camera mainCamera;
 
+    public float segmentOverlap = 0.05f;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -113,7 +115,9 @@ public class GroundSpawner : MonoBehaviour
         {
             GameObject lastSegment = activeSegments[activeSegments.Count - 1];
             float lastSegmentRightEdge = lastSegment.transform.position.x + (segmentWidth * 0.5f);
-            spawnX = lastSegmentRightEdge + (segmentWidth * 0.5f);
+
+            // Solapamos ligeramente los segmentos para evitar líneas visuales entre piezas
+            spawnX = lastSegmentRightEdge + (segmentWidth * 0.5f) - segmentOverlap;
         }
 
         Vector3 spawnPosition = new Vector3(spawnX, groundY, 0f);
