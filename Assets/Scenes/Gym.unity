@@ -2231,9 +2231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyTimer: 0
-  startMoveSpeed: 3
-  maxMoveSpeed: 7
-  speedIncreasePerSecond: 0.05
+  startMoveSpeed: 4
+  maxMoveSpeed: 9
+  speedIncreasePerSecond: 0.1
   moveSpeedMultiplier: 1
   scoreMultiplier: 1
   minObstacleSpawnTime: 0.8
