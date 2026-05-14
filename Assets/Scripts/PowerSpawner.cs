@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PowerSpawner : MonoBehaviour
@@ -17,19 +16,28 @@ public class PowerSpawner : MonoBehaviour
     // Posición X de spawn
     public float spawnX = 12f;
 
+    private float spawnTimer;
+    private DifficultyManager difficultyManager;
+
     void Start()
     {
-        StartCoroutine(SpawnRoutine());
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
+        ResetTimer();
     }
 
-    IEnumerator SpawnRoutine()
+    void Update()
     {
-        while (true)
-        {
-            float waitTime = Random.Range(minSpawnTime, maxSpawnTime);
-            yield return new WaitForSeconds(waitTime);
+        float multiplier = 1f;
 
+        if (difficultyManager != null)
+            multiplier = difficultyManager.spawnSpeedMultiplier;
+
+        spawnTimer -= Time.deltaTime * multiplier;
+
+        if (spawnTimer <= 0f)
+        {
             SpawnPowerRune();
+            ResetTimer();
         }
     }
 
@@ -41,5 +49,10 @@ public class PowerSpawner : MonoBehaviour
         Vector3 pos = new Vector3(spawnX, Random.Range(minY, maxY), 0f);
 
         Instantiate(powerRunePrefab, pos, Quaternion.identity);
+    }
+
+    void ResetTimer()
+    {
+        spawnTimer = Random.Range(minSpawnTime, maxSpawnTime);
     }
 }

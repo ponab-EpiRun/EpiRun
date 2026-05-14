@@ -18,16 +18,23 @@ public class ObstacleSpawner : MonoBehaviour
 
     private float spawnTimer;
     private Camera mainCamera;
+    private DifficultyManager difficultyManager;
 
     void Start()
     {
         mainCamera = Camera.main;
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
         ResetTimer();
     }
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime;
+        float multiplier = 1f;
+
+        if (difficultyManager != null)
+            multiplier = difficultyManager.spawnSpeedMultiplier;
+
+        spawnTimer -= Time.deltaTime * multiplier;
 
         if (spawnTimer <= 0f)
         {
@@ -57,18 +64,10 @@ public class ObstacleSpawner : MonoBehaviour
         Debug.DrawRay(rayOrigin, Vector2.down * rayDistance, Color.red, 1f);
 
         if (hit.collider == null)
-        {
-            Debug.Log("No hay suelo debajo del spawn");
             return;
-        }
-
-        Debug.Log("Raycast toca: " + hit.collider.gameObject.name + " | Tag: " + hit.collider.tag);
 
         if (!hit.collider.CompareTag("Ground"))
-        {
-            Debug.Log("No spawnea porque no es Ground");
             return;
-        }
 
         Vector3 spawnPosition = new Vector3(spawnX, obstacleY, 0f);
         Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);

@@ -19,10 +19,12 @@ public class FlyingEnemySpawner : MonoBehaviour
     private float gameTimer;
     private float spawnTimer;
     private Camera mainCamera;
+    private DifficultyManager difficultyManager;
 
     void Start()
     {
         mainCamera = Camera.main;
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
         ResetTimer();
     }
 
@@ -33,7 +35,12 @@ public class FlyingEnemySpawner : MonoBehaviour
         if (gameTimer < startSpawningAfter)
             return;
 
-        spawnTimer -= Time.deltaTime;
+        float multiplier = 1f;
+
+        if (difficultyManager != null)
+            multiplier = difficultyManager.spawnSpeedMultiplier;
+
+        spawnTimer -= Time.deltaTime * multiplier;
 
         if (spawnTimer <= 0f)
         {

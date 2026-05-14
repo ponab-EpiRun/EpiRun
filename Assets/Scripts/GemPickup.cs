@@ -10,10 +10,18 @@ public class GemPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameHUDManager hud = FindFirstObjectByType<GameHUDManager>();
+            PlayerPowerController powerController = collision.GetComponent<PlayerPowerController>();
 
             if (hud != null)
             {
-                hud.AddEnergy(energyAmount);
+                float multiplier = 1f;
+
+                if (powerController != null)
+                {
+                    multiplier = powerController.GetYngviEnergyMultiplier();
+                }
+
+                hud.AddEnergy(energyAmount * multiplier);
                 hud.AddScore(scoreAmount);
             }
 

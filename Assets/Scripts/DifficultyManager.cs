@@ -10,6 +10,10 @@ public class DifficultyManager : MonoBehaviour
     public float maxMoveSpeed = 7f;
     public float speedIncreasePerSecond = 0.025f;
 
+    [Header("Current Difficulty Values")]
+    public float currentMoveSpeed;
+    public float spawnSpeedMultiplier = 1f;
+
     [Header("Power Multipliers")]
     public float moveSpeedMultiplier = 1f;
     public float scoreMultiplier = 1f;
@@ -43,6 +47,7 @@ public class DifficultyManager : MonoBehaviour
         difficultyTimer += Time.deltaTime;
 
         UpdateMoveSpeed();
+        UpdateSpawnSpeedMultiplier();
         UpdateObstacleSpawner();
         UpdateGemSpawner();
         UpdateEnergyDrain();
@@ -50,21 +55,26 @@ public class DifficultyManager : MonoBehaviour
 
     void UpdateMoveSpeed()
     {
-        float currentSpeed = Mathf.Clamp(
+        currentMoveSpeed = Mathf.Clamp(
             startMoveSpeed + difficultyTimer * speedIncreasePerSecond,
             startMoveSpeed,
             maxMoveSpeed
         );
 
-        // AQUÍ ESTÁ LA CLAVE
-        currentSpeed *= moveSpeedMultiplier;
+        currentMoveSpeed *= moveSpeedMultiplier;
 
         MoveLeft[] movers = FindObjectsByType<MoveLeft>(FindObjectsSortMode.None);
 
         for (int i = 0; i < movers.Length; i++)
         {
-            movers[i].speed = currentSpeed;
+            movers[i].speed = currentMoveSpeed;
         }
+    }
+
+    void UpdateSpawnSpeedMultiplier()
+    {
+        spawnSpeedMultiplier = currentMoveSpeed / startMoveSpeed;
+        spawnSpeedMultiplier = Mathf.Clamp(spawnSpeedMultiplier, 1f, 2.5f);
     }
 
     void UpdateObstacleSpawner()

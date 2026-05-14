@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
     // Ajustar fuerza de salto
     public float jumpForce = 5f;
 
+    [Header("Death")]
+    public string deadPlayerLayerName = "DeadPlayer";
+
     // Tiempo antes de mostrar Game Over
     public float deathDelay = 9.2f;
 
@@ -24,22 +27,20 @@ public class PlayerController : MonoBehaviour
 
     public GameObject auraBalder;
 
-    [Header("Screen Position")]
-    public float distanceFromLeftEdge = 4f;
-
-
-    private Camera mainCamera;
+    private CapsuleCollider2D playerCollider;
     private float startX;
+    private float defaultGravityScale;
 
     void Start()
     {
+        playerCollider = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         gameUIManager = FindFirstObjectByType<GameUIManager>();
 
-        mainCamera = Camera.main;
-        SetPlayerStartX();
+        startX = transform.position.x;
+        defaultGravityScale = rb.gravityScale;
 
         // Estado inicial del Animator
         if (animator != null)
@@ -53,21 +54,6 @@ public class PlayerController : MonoBehaviour
 
         if (auraBalder != null)
             auraBalder.SetActive(false);
-
-    }
-
-    void SetPlayerStartX()
-    {
-        if (mainCamera == null)
-            return;
-
-        float camHeight = mainCamera.orthographicSize;
-        float camWidth = camHeight * mainCamera.aspect;
-        float cameraLeftEdge = mainCamera.transform.position.x - camWidth;
-
-        startX = cameraLeftEdge + distanceFromLeftEdge;
-
-        transform.position = new Vector3(startX, transform.position.y, transform.position.z);
     }
 
     void Update()
@@ -113,8 +99,11 @@ public class PlayerController : MonoBehaviour
         }
 
         // Evitamos que el jugador se quede atrás o avance por choques laterales
-        transform.position = new Vector3(startX, transform.position.y, transform.position.z);
-        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        if (!isDead)
+        {
+            transform.position = new Vector3(startX, transform.position.y, transform.position.z);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        }
 
         if (auraBalder != null)
         {
@@ -163,7 +152,12 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         isDead = true;
+        int deadLayer = LayerMask.NameToLayer(deadPlayerLayerName);
 
+        if (deadLayer != -1)
+        {
+            gameObject.layer = deadLayer;
+        }
         // Activamos animación de muerte
         if (animator != null)
         {
@@ -173,9 +167,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isDead", true);
         }
 
-        // Detenemos gravedad y movimiento del jugador
+
+        // Permitimos que el personaje caiga
         rb.linearVelocity = Vector2.zero;
-        rb.gravityScale = 0f;
+        rb.gravityScale = defaultGravityScale;
 
         // Paramos todo lo que se mueve por script
         StopWorld();
@@ -198,10 +193,18 @@ public class PlayerController : MonoBehaviour
         GroundSpawner ground = FindFirstObjectByType<GroundSpawner>();
         PlatformSpawner platform = FindFirstObjectByType<PlatformSpawner>();
         ObstacleSpawner obstacle = FindFirstObjectByType<ObstacleSpawner>();
+        GemSpawner gem = FindFirstObjectByType<GemSpawner>();
+        FlyingEnemySpawner flying = FindFirstObjectByType<FlyingEnemySpawner>();
+        SlimeSpawner slime = FindFirstObjectByType<SlimeSpawner>();
+        PowerSpawner power = FindFirstObjectByType<PowerSpawner>();
 
         if (ground != null) ground.enabled = false;
         if (platform != null) platform.enabled = false;
         if (obstacle != null) obstacle.enabled = false;
+        if (gem != null) gem.enabled = false;
+        if (flying != null) flying.enabled = false;
+        if (slime != null) slime.enabled = false;
+        if (power != null) power.enabled = false;
     }
 
     IEnumerator ShowGameOverAfterDelay()

@@ -45,7 +45,7 @@ public class PlayerPowerController : MonoBehaviour
 
             case PowerType.YngviBlessing:
                 ShowPowerMessage("Bendición de Yngvi");
-                StartCoroutine(YngviRoutine());
+                isYngviActive = true;
                 break;
 
             case PowerType.SkuldGaze:
@@ -107,13 +107,15 @@ public class PlayerPowerController : MonoBehaviour
         Debug.Log("Sleipnir FINALIZADO");
     }
 
-    IEnumerator YngviRoutine()
+    public float GetYngviEnergyMultiplier()
     {
-        isYngviActive = true;
+        if (isYngviActive)
+        {
+            isYngviActive = false;
+            return yngviEnergyMultiplier;
+        }
 
-        yield return new WaitForSeconds(yngviDuration);
-
-        isYngviActive = false;
+        return 1f;
     }
 
     IEnumerator SkuldRoutine()

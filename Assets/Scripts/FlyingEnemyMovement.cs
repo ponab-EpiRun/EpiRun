@@ -1,26 +1,24 @@
 using UnityEngine;
 
-
 public class FlyingEnemyMovement : MonoBehaviour
 {
     // Velocidad extra respecto al escenario
-    public float extraSpeed = 2f;
+    public float extraSpeed = 2.5f;
 
-    private MoveLeft referenceMover;
+    private DifficultyManager difficultyManager;
 
     void Start()
     {
-        // Cogemos cualquier objeto que use MoveLeft como referencia
-        referenceMover = FindFirstObjectByType<MoveLeft>();
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
     }
 
     void Update()
     {
         float currentSpeed = extraSpeed;
 
-        if (referenceMover != null)
+        if (difficultyManager != null)
         {
-            currentSpeed += referenceMover.speed;
+            currentSpeed = difficultyManager.currentMoveSpeed + extraSpeed;
         }
 
         transform.position += Vector3.left * currentSpeed * Time.deltaTime;

@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class SlimeSpawner : MonoBehaviour
+public class MimeticSpawner : MonoBehaviour
 {
-    public GameObject slimePrefab;
+    public GameObject MimeticPrefab;
 
-    // Tiempo antes de empezar a generar slimes
+    // Tiempo antes de empezar a generar Mimetic
     public float startSpawningAfter = 30f;
 
-    // Tiempo entre slimes
+    // Tiempo entre Mimetic
     public float minSpawnTime = 4f;
     public float maxSpawnTime = 8f;
 
     [Header("Spawn Position")]
     public float spawnOffsetX = 8f;
-    public float slimeY = -1.93f;
+    public float MimeticY = -1.93f;
 
     private float gameTimer;
     private float spawnTimer;
@@ -43,16 +43,16 @@ public class SlimeSpawner : MonoBehaviour
 
         if (spawnTimer <= 0f)
         {
-            SpawnSlime();
+            SpawnMimetic();
             ResetTimer();
         }
     }
 
-    void SpawnSlime()
+    void SpawnMimetic()
     {
-        if (slimePrefab == null)
+        if (MimeticPrefab == null)
         {
-            Debug.LogError("Falta asignar slimePrefab en el objeto: " + gameObject.name);
+            Debug.LogError("Falta asignar MimeticPrefab en el objeto: " + gameObject.name);
             enabled = false;
             return;
         }
@@ -63,9 +63,9 @@ public class SlimeSpawner : MonoBehaviour
 
         float spawnX = cameraRightEdge + spawnOffsetX;
 
-        Vector3 spawnPosition = new Vector3(spawnX, slimeY, 0f);
+        Vector3 spawnPosition = new Vector3(spawnX, MimeticY, 0f);
 
-        Instantiate(slimePrefab, spawnPosition, Quaternion.identity);
+        Instantiate(MimeticPrefab, spawnPosition, Quaternion.identity);
     }
 
     void ResetTimer()

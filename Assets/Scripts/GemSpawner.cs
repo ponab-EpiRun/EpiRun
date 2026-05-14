@@ -14,17 +14,26 @@ public class GemSpawner : MonoBehaviour
     public float maxY = 2.5f;
 
     private float spawnTimer;
+    private DifficultyManager difficultyManager;
     private Camera mainCamera;
 
     void Start()
     {
+        difficultyManager = FindFirstObjectByType<DifficultyManager>();
         mainCamera = Camera.main;
         ResetTimer();
     }
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime;
+        float multiplier = 1f;
+
+        if (difficultyManager != null)
+        {
+            multiplier = difficultyManager.spawnSpeedMultiplier;
+        }
+
+        spawnTimer -= Time.deltaTime * multiplier;
 
         if (spawnTimer <= 0f)
         {

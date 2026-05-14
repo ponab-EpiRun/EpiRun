@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class SlimeMovement : MonoBehaviour
+public class MimeticMovement : MonoBehaviour
 {
     // Velocidad extra respecto al escenario
-    public float extraSpeed = 2f;
+    public float extraSpeed = 1.5f;
 
     private DifficultyManager difficultyManager;
 
