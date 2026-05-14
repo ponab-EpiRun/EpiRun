@@ -2977,6 +2977,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103838292}
   m_CullTransparentMesh: 1
+--- !u!1 &1106447426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106447428}
+  - component: {fileID: 1106447427}
+  m_Layer: 0
+  m_Name: SlimeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1106447427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106447426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffbc37e7debc4740a123d2bb08aea93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slimePrefab: {fileID: 3824693257674088989, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+  startSpawningAfter: 10
+  minSpawnTime: 4
+  maxSpawnTime: 10
+  spawnOffsetX: 15
+  rayStartY: 5
+  rayDistance: 20
+  slimeYOffset: -0.15
+--- !u!4 &1106447428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106447426}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.051728, y: 0.24352565, z: 0.021280242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229524681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,6 +4425,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerText: {fileID: 702106343}
   showTime: 2
+--- !u!1001 &2025964973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.709733
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.897306
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080297761287101122, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824693257674088989, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
+      propertyPath: m_Name
+      value: SlimePrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34927ef8c8636e24c8207c4968d82af0, type: 3}
 --- !u!1 &2125948760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,3 +4821,5 @@ SceneRoots:
   - {fileID: 330295841}
   - {fileID: 582253899}
   - {fileID: 947757242}
+  - {fileID: 2025964973}
+  - {fileID: 1106447428}
