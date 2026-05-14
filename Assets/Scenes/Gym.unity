@@ -1504,6 +1504,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1571543008002928171, guid: dde2886c879bd1c4c8bc5647dcff13d9, type: 3}
   m_PrefabInstance: {fileID: 2635024446699531846}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &582253899
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5134406
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54993147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012525596995355793, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538103927380342286, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+      propertyPath: m_Name
+      value: FlyingEnemyPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
 --- !u!1 &606034340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,8 +2034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 2927345928659011638, guid: 2187aa818ced8b9428e8ce2050ef9bbc, type: 3}
-  minSpawnTime: 10
-  maxSpawnTime: 20
+  minSpawnTime: 8
+  maxSpawnTime: 15
   spawnOffsetX: 15
   minY: -0.5
   maxY: 2.5
@@ -2196,6 +2253,57 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.088202, y: -1.2186161, z: -0.08785638}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &947757240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947757242}
+  - component: {fileID: 947757241}
+  m_Layer: 0
+  m_Name: FlyingEnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947757241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947757240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2901dec5c83f35444aeb6f7287514387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingEnemyPrefab: {fileID: 2538103927380342286, guid: 0825a9adadfa4a446a8cafd85e55adcb, type: 3}
+  startSpawningAfter: 20
+  minSpawnTime: 3
+  maxSpawnTime: 10
+  spawnOffsetX: 15
+  minY: 0
+  maxY: 3
+--- !u!4 &947757242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947757240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.4051285, y: -0.035384685, z: 0.024671378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4602,3 +4710,5 @@ SceneRoots:
   - {fileID: 962409294}
   - {fileID: 886687528}
   - {fileID: 330295841}
+  - {fileID: 582253899}
+  - {fileID: 947757242}
