@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameHUDManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class GameHUDManager : MonoBehaviour
 
     private float currentEnergy;
     private bool isGameOver = false;
+
+    [Header("Energy Bar")]
+    public Image energyFillImage;
 
     private DifficultyManager difficultyManager;
 
@@ -76,7 +80,10 @@ public class GameHUDManager : MonoBehaviour
             scoreText.text = "Puntuación: " + totalScore;
 
         if (energyText != null)
-            energyText.text = "Energía: " + Mathf.FloorToInt(currentEnergy) + "%";
+            energyText.text =  Mathf.FloorToInt(currentEnergy) + "%";
+
+        if (energyFillImage != null)
+            energyFillImage.fillAmount = currentEnergy / maxEnergy;
     }
 
     public void AddEnergy(float amount)
