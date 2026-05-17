@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3774670731429190958}
   - component: {fileID: 2938592457726787851}
   - component: {fileID: 1673379660022581088}
+  - component: {fileID: -7622356037247107230}
   m_Layer: 6
   m_Name: MimeticPrefab
   m_TagString: Enemy
@@ -213,3 +214,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraSpeed: 1.5
+--- !u!114 &-7622356037247107230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6171810920456196823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c2e4d838bdfd145b23d602973becc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  enemyCollider: {fileID: 0}
+  deathBoolName: isDead
+  destroyDelay: 0.8

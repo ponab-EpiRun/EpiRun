@@ -21,12 +21,18 @@ public class PlayerPowerController : MonoBehaviour
 
     private Coroutine sleipnirCoroutine;
 
+    public GameObject afterImagePrefab;
+
+    private SpriteRenderer playerSprite;
+    private float afterImageTimer;
+
     void Start()
     {
         playerController = GetComponent<PlayerController>();
         difficultyManager = FindFirstObjectByType<DifficultyManager>();
         powerUI = FindFirstObjectByType<PowerMessageUI>();
         animator = GetComponent<Animator>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     public void ActivatePower(PowerType powerType)
@@ -46,6 +52,10 @@ public class PlayerPowerController : MonoBehaviour
             case PowerType.YngviBlessing:
                 ShowPowerMessage("Bendición de Yngvi");
                 isYngviActive = true;
+
+                if (playerController.yngviHalo != null)
+                    playerController.yngviHalo.SetActive(true);
+
                 break;
 
             case PowerType.SkuldGaze:
@@ -112,6 +122,10 @@ public class PlayerPowerController : MonoBehaviour
         if (isYngviActive)
         {
             isYngviActive = false;
+
+            if (playerController.yngviHalo != null)
+                playerController.yngviHalo.SetActive(false);
+
             return yngviEnergyMultiplier;
         }
 
@@ -137,4 +151,40 @@ public class PlayerPowerController : MonoBehaviour
         isLokiActive = false;
         playerController.canDoubleJump = true;
     }
+
+    void Update()
+    {
+        if (difficultyManager.moveSpeedMultiplier > 1f)
+        {
+            afterImageTimer -= Time.deltaTime;
+
+            if (afterImageTimer <= 0f)
+            {
+                SpawnAfterImage();
+                afterImageTimer = 0.08f;
+            }
+        }
+    }
+
+    void SpawnAfterImage()
+    {
+        GameObject img = Instantiate(
+            afterImagePrefab,
+            transform.position,
+            Quaternion.identity
+        );
+
+        img.transform.localScale = transform.localScale;
+
+        SpriteRenderer sr = img.GetComponent<SpriteRenderer>();
+
+        sr.sprite = playerSprite.sprite;
+        sr.flipX = playerSprite.flipX;
+
+        sr.color = new Color(0.5f, 0.8f, 1f, 0.5f);
+
+        sr.sortingLayerID = playerSprite.sortingLayerID;
+        sr.sortingOrder = playerSprite.sortingOrder - 1;
+    }
+
 }

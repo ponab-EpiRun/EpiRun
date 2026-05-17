@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: aa2d166fcd095c9448b285af314b18a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7599415724817324821
+    second: Yngvi2_0
+  - first:
+      213: -3728480977990509556
+    second: Yngvi2_1
+  - first:
+      213: -8048905171220999695
+    second: Yngvi2_2
+  - first:
+      213: -1576992461021787731
+    second: Yngvi2_3
+  - first:
+      213: -4276664114620081650
+    second: Yngvi2_4
+  - first:
+      213: -2917799891219818799
+    second: Yngvi2_5
+  - first:
+      213: -6203228704869542074
+    second: Yngvi2_6
+  - first:
+      213: -5333270593056661254
+    second: Yngvi2_7
+  - first:
+      213: -4820244534678699043
+    second: Yngvi2_8
+  - first:
+      213: -2298187155919046002
+    second: Yngvi2_9
+  - first:
+      213: -8968415746851919081
+    second: Yngvi2_10
+  - first:
+      213: -4253156387678415520
+    second: Yngvi2_11
+  - first:
+      213: 5538340143646152007
+    second: Yngvi2_12
+  - first:
+      213: -5594395145094262457
+    second: Yngvi2_13
+  - first:
+      213: 7305527711094029541
+    second: Yngvi2_14
+  - first:
+      213: 2550684871583814283
+    second: Yngvi2_15
+  - first:
+      213: -3095898178639236775
+    second: Yngvi2_16
+  - first:
+      213: 366079407723927356
+    second: Yngvi2_17
+  - first:
+      213: 7435609306341268663
+    second: Yngvi2_18
+  - first:
+      213: -6984382400925628193
+    second: Yngvi2_19
+  - first:
+      213: -393652583286936774
+    second: Yngvi2_20
+  - first:
+      213: -6284738205619686822
+    second: Yngvi2_21
+  - first:
+      213: -630929117252520683
+    second: Yngvi2_22
+  - first:
+      213: -3098824195584889304
+    second: Yngvi2_23
+  - first:
+      213: 4441443766606561156
+    second: Yngvi2_24
+  - first:
+      213: 2114934443789642566
+    second: Yngvi2_25
+  - first:
+      213: -7322419730956267110
+    second: Yngvi2_26
+  - first:
+      213: -6181428589015194069
+    second: Yngvi2_27
+  - first:
+      213: -4639435780459414185
+    second: Yngvi2_28
+  - first:
+      213: 4267088322099181544
+    second: Yngvi2_29
+  - first:
+      213: 4578821249265533445
+    second: Yngvi2_30
+  - first:
+      213: -3164232412591300827
+    second: Yngvi2_31
+  - first:
+      213: 7976103436952690011
+    second: Yngvi2_32
+  - first:
+      213: -1792383008856527455
+    second: Yngvi2_33
+  - first:
+      213: -3467292126111402385
+    second: Yngvi2_34
+  - first:
+      213: -491831661673323452
+    second: Yngvi2_35
+  - first:
+      213: 5867454526984178359
+    second: Yngvi2_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Yngvi2_0
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 555
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b114a965c867960800000000000000
+      internalID: 7599415724817324821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c131b0e46c14cc0800000000000000
+      internalID: -3728480977990509556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 555
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f15196446b8c4090800000000000000
+      internalID: -8048905171220999695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_3
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 580
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9c35346b56d1ae0800000000000000
+      internalID: -1576992461021787731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_4
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 596
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ad86085ac36a4c0800000000000000
+      internalID: -4276664114620081650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_5
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 561
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d65b264574e187d0800000000000000
+      internalID: -2917799891219818799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 573
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6479eb9eb54b9e9a0800000000000000
+      internalID: -6203228704869542074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_7
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 538
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af022d907aa6cf5b0800000000000000
+      internalID: -5333270593056661254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 538
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd345fb622d0b1db0800000000000000
+      internalID: -4820244534678699043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 538
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a741045f23b10e0800000000000000
+      internalID: -2298187155919046002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_10
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 538
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b2fda1569c98380800000000000000
+      internalID: -8968415746851919081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_11
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 534
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0659e32bcc0c9f4c0800000000000000
+      internalID: -4253156387678415520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_12
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 545
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745905b64032cdc40800000000000000
+      internalID: 5538340143646152007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_13
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 545
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7419c738147bc52b0800000000000000
+      internalID: -5594395145094262457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 353
+        width: 490
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec38843fb2726560800000000000000
+      internalID: 7305527711094029541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_15
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 352
+        width: 486
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8257b8606ad56320800000000000000
+      internalID: 2550684871583814283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_16
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 522
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951fd6162092905d0800000000000000
+      internalID: -3095898178639236775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_17
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 353
+        width: 492
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3758f02843941500800000000000000
+      internalID: 366079407723927356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_18
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 522
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc5f01c447903760800000000000000
+      internalID: 7435609306341268663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_19
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 511
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd88651163d721f90800000000000000
+      internalID: -6984382400925628193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 499
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b6448af07798af0800000000000000
+      internalID: -393652583286936774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_21
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 453
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5276b366ef18c8a0800000000000000
+      internalID: -6284738205619686822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 89
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51576b78f4d7e37f0800000000000000
+      internalID: -630929117252520683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_23
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 341
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ee6c8ffc3cef4d0800000000000000
+      internalID: -3098824195584889304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_24
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 349
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ff47ee29d23ad30800000000000000
+      internalID: 4441443766606561156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_25
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 307
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64be155dba1c95d10800000000000000
+      internalID: 2114934443789642566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_26
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 349
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a915a00fc0a816a90800000000000000
+      internalID: -7322419730956267110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_27
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 348
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b262e4be277273aa0800000000000000
+      internalID: -6181428589015194069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_28
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 336
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75dba7b0db96d9fb0800000000000000
+      internalID: -4639435780459414185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_29
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 321
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e770ff883eb73b30800000000000000
+      internalID: 4267088322099181544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_30
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 311
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5028b74aaad3b8f30800000000000000
+      internalID: 4578821249265533445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_31
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 307
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fd7b4b2636614d0800000000000000
+      internalID: -3164232412591300827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_32
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 313
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d565311dfc0be60800000000000000
+      internalID: 7976103436952690011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_33
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 311
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad29af562d2027e0800000000000000
+      internalID: -1792383008856527455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_34
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 284
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66fe9a8e24b1efc0800000000000000
+      internalID: -3467292126111402385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_35
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 314
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444eba4a5b9ac29f0800000000000000
+      internalID: -491831661673323452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yngvi2_36
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 300
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba46a02ec26d6150800000000000000
+      internalID: 5867454526984178359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Yngvi2_0: 7599415724817324821
+      Yngvi2_1: -3728480977990509556
+      Yngvi2_10: -8968415746851919081
+      Yngvi2_11: -4253156387678415520
+      Yngvi2_12: 5538340143646152007
+      Yngvi2_13: -5594395145094262457
+      Yngvi2_14: 7305527711094029541
+      Yngvi2_15: 2550684871583814283
+      Yngvi2_16: -3095898178639236775
+      Yngvi2_17: 366079407723927356
+      Yngvi2_18: 7435609306341268663
+      Yngvi2_19: -6984382400925628193
+      Yngvi2_2: -8048905171220999695
+      Yngvi2_20: -393652583286936774
+      Yngvi2_21: -6284738205619686822
+      Yngvi2_22: -630929117252520683
+      Yngvi2_23: -3098824195584889304
+      Yngvi2_24: 4441443766606561156
+      Yngvi2_25: 2114934443789642566
+      Yngvi2_26: -7322419730956267110
+      Yngvi2_27: -6181428589015194069
+      Yngvi2_28: -4639435780459414185
+      Yngvi2_29: 4267088322099181544
+      Yngvi2_3: -1576992461021787731
+      Yngvi2_30: 4578821249265533445
+      Yngvi2_31: -3164232412591300827
+      Yngvi2_32: 7976103436952690011
+      Yngvi2_33: -1792383008856527455
+      Yngvi2_34: -3467292126111402385
+      Yngvi2_35: -491831661673323452
+      Yngvi2_36: 5867454526984178359
+      Yngvi2_4: -4276664114620081650
+      Yngvi2_5: -2917799891219818799
+      Yngvi2_6: -6203228704869542074
+      Yngvi2_7: -5333270593056661254
+      Yngvi2_8: -4820244534678699043
+      Yngvi2_9: -2298187155919046002
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

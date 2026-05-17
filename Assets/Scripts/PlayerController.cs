@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public bool canDoubleJump = true;
     public bool hasBalderProtection = false;
 
+
     private Rigidbody2D rb;
     private bool isGrounded = true;
     private bool doubleJumpAvailable = false;
@@ -26,10 +27,13 @@ public class PlayerController : MonoBehaviour
     private GameUIManager gameUIManager;
 
     public GameObject auraBalder;
+    public GameObject yngviHalo;
 
     private CapsuleCollider2D playerCollider;
     private float startX;
     private float defaultGravityScale;
+
+
 
     void Start()
     {
@@ -41,6 +45,9 @@ public class PlayerController : MonoBehaviour
 
         startX = transform.position.x;
         defaultGravityScale = rb.gravityScale;
+
+        if (yngviHalo != null)
+            yngviHalo.SetActive(false);
 
         // Estado inicial del Animator
         if (animator != null)
@@ -137,6 +144,19 @@ public class PlayerController : MonoBehaviour
         // Muerte al chocar con obstáculo/enemigo
         if ((collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Enemy")) && !isDead)
         {
+            StompableEnemy stompableEnemy = collision.gameObject.GetComponent<StompableEnemy>();
+
+            // Si el jugador cae encima de un enemigo pisable, lo elimina
+            if (stompableEnemy != null && IsStompingEnemy(collision))
+            {
+                stompableEnemy.Die();
+
+                // Pequeño rebote al pisar enemigo
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 0.6f);
+
+                return;
+            }
+
             // Protección de Balder: absorbe un impacto y destruye el obstáculo/enemigo
             if (hasBalderProtection)
             {
@@ -147,6 +167,22 @@ public class PlayerController : MonoBehaviour
 
             Die();
         }
+    }
+
+    bool IsStompingEnemy(Collision2D collision)
+    {
+        if (rb.linearVelocity.y > 0f)
+            return false;
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     void Die()
