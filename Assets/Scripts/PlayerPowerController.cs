@@ -18,10 +18,13 @@ public class PlayerPowerController : MonoBehaviour
     private PlayerController playerController;
     private DifficultyManager difficultyManager;
     private Animator animator;
+    public GameObject lokiEffect;
 
     private Coroutine sleipnirCoroutine;
 
     public GameObject afterImagePrefab;
+    public GameObject skuldIceFrame;
+    public GameObject BlueFilter;
 
     private SpriteRenderer playerSprite;
     private float afterImageTimer;
@@ -33,6 +36,14 @@ public class PlayerPowerController : MonoBehaviour
         powerUI = FindFirstObjectByType<PowerMessageUI>();
         animator = GetComponent<Animator>();
         playerSprite = GetComponent<SpriteRenderer>();
+
+        if (skuldIceFrame != null)
+            skuldIceFrame.SetActive(false);
+        if (BlueFilter != null)
+            BlueFilter.SetActive(false);
+
+        if (lokiEffect != null)
+            lokiEffect.SetActive(false);
     }
 
     public void ActivatePower(PowerType powerType)
@@ -134,22 +145,41 @@ public class PlayerPowerController : MonoBehaviour
 
     IEnumerator SkuldRoutine()
     {
+        if (skuldIceFrame != null)
+            skuldIceFrame.SetActive(true);
+
+        if (BlueFilter != null)
+            BlueFilter.SetActive(true);
+
         Time.timeScale = skuldWorldSpeedMultiplier;
 
         yield return new WaitForSecondsRealtime(skuldDuration);
 
         Time.timeScale = 1f;
+
+        if (skuldIceFrame != null)
+            skuldIceFrame.SetActive(false);
+        if (BlueFilter != null)
+            BlueFilter.SetActive(false);
     }
 
     IEnumerator LokiRoutine()
     {
+        Debug.Log("LOKI ACTIVADO");
+
         isLokiActive = true;
         playerController.canDoubleJump = false;
+
+        if (lokiEffect != null)
+            lokiEffect.SetActive(true);
 
         yield return new WaitForSeconds(lokiDuration);
 
         isLokiActive = false;
         playerController.canDoubleJump = true;
+
+        if (lokiEffect != null)
+            lokiEffect.SetActive(false);
     }
 
     void Update()

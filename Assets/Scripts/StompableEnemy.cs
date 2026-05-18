@@ -4,7 +4,7 @@ public class StompableEnemy : MonoBehaviour
 {
     public Animator animator;
     public Collider2D enemyCollider;
-
+    public int scoreOnDeath = 200;
     public string deathBoolName = "isDead";
     public float destroyDelay = 0.8f;
 
@@ -26,6 +26,13 @@ public class StompableEnemy : MonoBehaviour
 
         isDead = true;
 
+        GameHUDManager hud = FindFirstObjectByType<GameHUDManager>();
+
+        if (hud != null)
+        {
+            hud.AddScore(scoreOnDeath);
+
+        }
         if (animator != null)
             animator.SetBool(deathBoolName, true);
 

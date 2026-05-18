@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider2D playerCollider;
     private float startX;
     private float defaultGravityScale;
+    public GameObject lokiEffect;
+
 
 
 
@@ -48,6 +50,9 @@ public class PlayerController : MonoBehaviour
 
         if (yngviHalo != null)
             yngviHalo.SetActive(false);
+
+        if (lokiEffect != null)
+            lokiEffect.SetActive(false);
 
         // Estado inicial del Animator
         if (animator != null)
